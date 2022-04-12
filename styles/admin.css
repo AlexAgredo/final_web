@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.half-circle{
+    float: left;
+    shape-outside: circle(50% at 0 50%);
+    clip-path: circle(50% at 0 50%);
+    width: 800px;
+    height: 600px;
+    background: linear-gradient(rgb(255, 255, 255),
+    rgb(130, 197, 213));
+    /* margin-right: 40px; */
+}
+    
+
+.Hero__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px 40px;
+    min-height: 300px;
+    width: 400px;
+    box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    right: 15%;
+    top: 20%;
+  }
+  
+  .Hero__form input {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    font-size: 1.6rem;
+    margin-bottom: 10px !important;
+    padding: 0px 10px;
+    width: 100%;
+    outline: none;
+    height: 50px;
+    transition: all 0.3s linear;
+  }
+  .Hero__form input:focus {
+    border-color: rgb(130, 197, 213);
+  }
+  
+  .Button {
+    background-color: rgb(130, 197, 213);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 2.8rem;
+    height: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+    align-self: center;
+    transition: 0.3s all ease-in-out;
+    margin-bottom: 0 !important;
+    box-shadow: 0px 3px 4px #0000002e;
+  }
+  
+  .Button:hover {
+    box-shadow: 9px 9px 4px #0000002e;
+  }
+  
+  .Hero__form label {
+    font-weight: bold;
+    color: #333;
+    font-size: 2rem;
+    margin: 5px;
+  }

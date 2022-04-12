@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <header>
+        <div class="divHeader">
+          <img src="/src/imgs/logoCaf.svg"  alt="logo festival" />
+          <ul>
+            <li><a href="../index.html">Inicio<span></span><span></span><span></span><span></span></a></li>
+            <li><a href="">Artistas</a></li>
+            <li><a href="">Galería</a></li>
+            <li><a href="../admin/admin.html">Administrador</a></li>
+          </ul>
+        </div>
+      </header>
+    <main>
+        <div class="half-circle"></div>
+        <form class="Hero__form" name="contact-form" method="post" onsubmit="loginFunc()">
+            <label for="">Usuario</label>
+            <input placeholder="Ingresa Nombre de Usuario" type="text" name="usuario" required="" id="username" pattern="[a-zA-Z ]{2,254}">
+            <label for="">Contraseña</label>
+            <input placeholder="Ingresa Contraseña" type="password" name="password" required="" id="password">
+            <input type="submit" value="Enviar" class="Button">
+            <p id="result">INICIA SESIÓN</p>
+        </form>
+    </main>
+    <script src="../js/admin.js"></script>
+</body>
+</html>
