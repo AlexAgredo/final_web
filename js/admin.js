@@ -1,21 +1,23 @@
-function loginFunc(e) {
-    event.preventDefault();
+let input = document.getElementById("username");
+let input2 = document.getElementById("password");
 
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
-    var result = document.getElementById('result');
+document.getElementById("boton").addEventListener("click", ADMIN);
+document.getElementById("boton").addEventListener("click", encriptar);
 
-    username = "Javi";
-    password = 1234;
+function ADMIN() {
 
-    
-    var user = localStorage.getItem(username);
-    var data = JSON.parse(user);
-    console.log(data);
-
-    if(username === "Javi" && password === 1234){
-        result.innerHTML = 'ENTRASTE';
-    }else{
-        result.innerHTML = 'GAY';
+    if(input.value === "javi23" && input2.value === "12345") {
+        console.log("entró");
+    } else {
+        document.getElementById("error").style.opacity="1";
+        input.value = "";
+        input2.value = "";
     }
+}
+
+function encriptar() {
+    let password = document.getElementById("password").value;
+    let crypto = btoa(password);
+    alert("Contraseña encriptada = " + crypto);
+
 }

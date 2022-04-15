@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+.divform{
+    padding: 2%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .form {
+    width: 340px;
+    height: 650px;
+    background: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #333;
+    margin: 40px;
+    padding: 20px 30px;
+    max-width: 600px;
+    box-sizing: border-box;
+    font-family: "Amaranth", sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .form h2 {
+    margin-top: 5px;
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+    width: 200px;
+    color: #5594a1;
+    border-bottom: 3px solid #496588;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: "Amaranth", sans-serif;
+    font-size: 1.6rem;
+    transition: all 0.3s;
+    border-bottom: 2px solid #bebed2;
+  }
+  input:focus {
+    border-bottom: 2px solid #78788c;
+  }
+  
+  select{
+    margin-top: 5px;
+    width: 140px;
+    font-family: "Amaranth", sans-serif;
+    font-size: 1.8rem;
+  }
+  
+  select:focus {
+    border: 2px solid #78788c;
+  }
+  
+  .form p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 1.5rem;
+    color: #2c2c2c;
+  }
+  
+  .form__container{
+    margin-bottom: 15px;
+  }
+  
+  button {
+    padding: 8px 12px;
+    margin: 0 auto;
+    font-family: "Amaranth", sans-serif;
+    font-size: 1.5rem;
+    border: 2px solid #496588;
+    background: 0;
+    color:#5594a1;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 80px;
+  }
+  button:hover {
+    background: rgb(130, 197, 213);
+    color: #fff;
+  }
+
+  .cuestionario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    background: linear-gradient(
+    rgb(255, 255, 255) 0%,
+    rgb(130, 197, 213) 100%
+    );
+    height: 750px;
+    font-size: 2rem;
+  }
+
+  .cuestionario h2{
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .cuestionario p{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .cuestionario__form{
+    font-size: 1.8rem;
+    
+  }
+
+  .cuestionario h3{
+    margin-top: 15px;
+  }
+
+  .cuestionario input{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cuestionario__form input[type='submit']{
+    background-color: rgb(255, 253, 244);
+    color: #333;
+    cursor: pointer;
+    margin-top: 25px;
+  }

@@ -78,3 +78,10 @@ html{
     font-size: 2rem;
     margin: 5px;
   }
+
+.Hero__form span{
+  text-align: center;
+  font-size: 1.6rem;
+  color: red;
+  opacity: 0;
+}

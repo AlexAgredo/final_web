@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletas</title>
+    <link rel="stylesheet" href="../styles/boletas.css">
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <header>
+        <div class="divHeader">
+          <img src="../src/imgs/logoCaf.svg"  alt="logo festival" />
+          <ul>
+            <li><a href="../index.html">Inicio<span></span><span></span><span></span><span></span></a></li>
+            <li><a href="">Artistas</a></li>
+            <li><a href="">Galería</a></li>
+            <li><a href="../admin/admin.html">Administrador</a></li>
+          </ul>
+        </div>
+    </header>
+    <main>
+        <div class="divform">
+            <form class="form" action="" method="post">
+              <h2>COMPRAR ENTRADAS</h2>
+              <div class="form__container">
+                <p type="Nombre:"><input placeholder="Ej: Juan José Ramirez" required class="placeholder"></input></p>
+                <p type="Email:"><input placeholder="Tu correo para contactarte" required class="placeholder"></input></p>
+                <p type="Número de tarjeta:"><input placeholder="XXXX-XXXX-XXXX-XXXX" required class="placeholder"></input></p>
+                <p type="CVC:"><input type="password" placeholder="" required class="placeholder"></input></p>
+                <p type="Cantidad a comprar:">
+                  <select name="boletas" id="boletas" required>
+                      <option value="1">1 - $ 549.900</option>
+                      <option value="2">2 - $ 1.099.800</option>
+                      <option value="3">3 - $ 1.649.700</option>
+                      <option value="4">4 - $ 2.198.700</option>
+                  </select>
+              </p>
+              <p type="Código de descuento:"><input placeholder="Recibe tú código completando la trivia" class="placeholder" id="descuento"></input></p>
+              </div>
+              <button id="boton">ENVIAR</button>
+            </form>
+          </div>
+
+          <div class="cuestionario" id="resultado">
+              <h2>Trivia</h2>
+              <p>Obtén un 50% de descuento completando la trivia</p>
+              <form class="cuestionario__form" name="Quiz" onsubmit="verificarRespuestas()">
+                  <h3>1. ¿Quién es el rey del reggaeton?</h3>
+                  <input type="radio" name="p1" value="a" id="">a. Daddy Yankee <br>
+                  <input type="radio" name="p1" value="b" id="">b. Anuel AA <br>
+                  <input type="radio" name="p1" value="c" id="">C. Tito el Bambino <br>
+
+                  <h3>2. ¿Quién es el rey del reggaeton?</h3>
+                  <input type="radio" name="p2" value="a" id="">a. Daddy Yankee <br>
+                  <input type="radio" name="p2" value="b" id="">b. Anuel AA <br>
+                  <input type="radio" name="p2" value="c" id="">C. Tito el Bambino <br>
+
+                  <h3>3. ¿Quién es el rey del reggaeton?</h3>
+                  <input type="radio" name="p3" value="a" id="">a. Daddy Yankee <br>
+                  <input type="radio" name="p3" value="b" id="">b. Anuel AA <br>
+                  <input type="radio" name="p3" value="c" id="">C. Tito el Bambino <br>
+
+                  <input type="submit" value="Comprobar">
+              </form>
+          </div>
+    </main>
+    <script src="../js/boletas.js"></script>
+</body>
+</html>
