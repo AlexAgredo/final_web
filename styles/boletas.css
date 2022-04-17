@@ -144,3 +144,104 @@ html{
     cursor: pointer;
     margin-top: 25px;
   }
+
+  h4 {
+    color: #6d6d6d;
+  }
+  .container_quiz{
+    font-size: 2rem;
+    background-color: rgb(130, 197, 213);
+    height: 100%;
+    padding: 50px;
+  }
+
+  .panel-heading h4{
+    text-align: center;
+  }
+
+  #barra {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+  }
+  
+  #bar {
+    height: 20px;
+    background-color: #4CAF50;
+    
+  }
+  
+  #start {
+    padding: 8px 12px;
+    margin: 0 auto;
+    font-family: "Amaranth", sans-serif;
+    font-size: 1.5rem;
+    border: 2px solid #496588;
+    background: 0;
+    color:#5594a1;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 80px;
+  }
+
+  #start:hover {
+    background: rgb(130, 197, 213);
+    color: #fff;
+  }
+  
+  #next {
+    padding: 8px 12px;
+    margin: 0 auto;
+    font-family: "Amaranth", sans-serif;
+    font-size: 1.5rem;
+    border: 2px solid #496588;
+    background: 0;
+    color:#5594a1;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 80px;
+  }
+
+  #next:hover {
+    background: rgb(130, 197, 213);
+    color: #fff;
+  }
+  
+  #back {
+    padding: 8px 12px;
+    margin: 0 auto;
+    font-family: "Amaranth", sans-serif;
+    font-size: 1.5rem;
+    border: 2px solid #496588;
+    background: 0;
+    color:#5594a1;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 80px;
+  }
+
+  #back:hover {
+    background: rgb(130, 197, 213);
+    color: #fff;
+  }
+  
+  #startagain {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 42px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  /* #div1 {
+    height: auto;
+  }
+  
+  #div2 {
+    height: auto;
+  } */
