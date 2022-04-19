@@ -26,17 +26,31 @@
     return false;
 } */
 
-/* let descuento = document.getElementById("descuento");
-document.getElementById("boton").addEventListener("click", comprobarDescuento);
+let boton1 = document.getElementById("boton1");
+
+boton1.addEventListener("submit", function(event){
+    event.preventDefault;
+})
+
+let descuento = document.getElementById("descuento");
+boton1.addEventListener("click", comprobarDescuento);
 
 function comprobarDescuento() {
 
     if(descuento.value === "CAF50") {
-        alert("Código aprobado, conseguiste un descuento del 50%");
+        document.getElementById("si").style.display = "block";
+        document.getElementById("no").style.display = "none";
+        document.getElementById("si").value = "";
     } else {
-        alert("Código no existente");
+        document.getElementById("no").style.display = "block";
+        document.getElementById("si").style.display = "none";
+        document.getElementById("no").value = "";
     }
-} */
+}
+
+function comprarBoletas() {
+    
+}
 
 // Create a function that will generate new question objects
 function newQuestion(params) {

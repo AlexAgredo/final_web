@@ -6,6 +6,7 @@
 
 html{
   font-size: 62.5%;
+  background-color: rgb(255, 255, 255);
 }
 .divform{
     padding: 2%;
@@ -17,7 +18,7 @@ html{
   }
   .form {
     width: 340px;
-    height: 650px;
+    height: 660px;
     background: #e6e6e6;
     border-radius: 8px;
     box-shadow: 0 0 40px -10px #333;
@@ -95,7 +96,40 @@ html{
     color: #fff;
   }
 
-  .cuestionario {
+  .descuento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .descuento p{
+    margin-left: 10px;
+    font-size: 1.6rem;
+  }
+
+  #boton1 {
+    padding: 8px 12px;
+    margin: 0 auto;
+    font-family: "Amaranth", sans-serif;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #496588;
+    background: 0;
+    color:#5594a1;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 70px;
+    height: 40px;
+  }
+
+  #boton1:hover {
+    background: rgb(130, 197, 213);
+    color: #fff;
+  }
+
+/*   .cuestionario {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -147,10 +181,13 @@ html{
 
   h4 {
     color: #6d6d6d;
-  }
+  } */
   .container_quiz{
     font-size: 2rem;
-    background-color: rgb(130, 197, 213);
+    background: linear-gradient(
+    rgb(255, 255, 255) 0%,
+    rgb(130, 197, 213) 100%
+  );
     height: 100%;
     padding: 50px;
   }
@@ -237,11 +274,3 @@ html{
     margin: 4px 2px;
     cursor: pointer;
   }
-  
-  /* #div1 {
-    height: auto;
-  }
-  
-  #div2 {
-    height: auto;
-  } */

@@ -16,13 +16,12 @@
             <li><a href="../index.html">Inicio<span></span><span></span><span></span><span></span></a></li>
             <li><a href="">Artistas</a></li>
             <li><a href="">Galería</a></li>
-            <li><a href="../admin/admin.html">Administrador</a></li>
           </ul>
         </div>
     </header>
     <main>
         <div class="divform">
-            <form class="form" action="" method="post">
+            <div id="form" class="form">
               <h2>COMPRAR ENTRADAS</h2>
               <div class="form__container">
                 <p type="Nombre:"><input placeholder="Ej: Juan José Ramirez" required class="placeholder"></input></p>
@@ -34,13 +33,19 @@
                       <option value="1">1 - $ 549.900</option>
                       <option value="2">2 - $ 1.099.800</option>
                       <option value="3">3 - $ 1.649.700</option>
-                      <option value="4">4 - $ 2.198.700</option>
+                      <option value="4">4 - $ 2.199.600</option>
                   </select>
               </p>
-              <p type="Código de descuento:"><input placeholder="Recibe tú código completando la trivia" class="placeholder" id="descuento"></input></p>
+              <div class="descuento">
+                <p type="Código de descuento:"><input placeholder="Recibe tú código completando la trivia" class="placeholder" id="descuento"></input></p>
+                <button style="cursor: pointer;" id="boton1">Verificar</button>
+                <!-- <button id="boton1">Verificar</button> -->
+                <p id="si" style="display: none; color: green;">Código Válido</p>
+                <p id="no" style="display: none; color: red;">Código Inválido</p>
               </div>
-              <button id="boton">ENVIAR</button>
-            </form>
+              </div>
+              <button id="boton">Comprar</button>
+            </div>
           </div>
 
           <!-- <div class="cuestionario" id="resultado">
@@ -80,7 +85,7 @@
                         <b>Puntaje máximo:</b> 100<br/>
                         <!-- <b>Pass Mark:</b> 70%<br/><br/> -->
                         <p style="color:#dc026b;"><b>Descripción</b><p/>
-                                      Completa la trivia con un puntaje de 100 y gana un 50% de descuento que aplicará en la compra de tus boletas</h4>
+                                      Completa la trivia con un puntaje de 100 y gana un 50% de descuento que aplicará en la compra de tus entradas.</h4>
                     </div>
                     
                   
