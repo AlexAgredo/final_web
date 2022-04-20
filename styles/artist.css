@@ -70,6 +70,12 @@
   padding-bottom: 15px;
   margin-bottom: 20px;
 }
+.derecha{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .artista .derecha{
     position: relative;
     right: 150px;
@@ -95,7 +101,7 @@
   left: 42%;
   top: 80%;
   color: #333;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .artista .izquierda{
@@ -123,5 +129,26 @@
   left: 43%;
   top: 80%;
   color: rgb(51, 51, 51);
+  font-size: 30px;
+}
+#imgBorrar{
+  display: none;
+}
+#imgArt{
+  background-size: cover;
+background-position: center;
+/* position: absolute; */
+/* right: 20%;
+top: 150px; */
+width: 450px;
+height: 450px;
+border-radius: 10%;
+}
+#nombreArt{
+  color: #333;
   font-size: 25px;
+  padding-top: 2%;
+}
+.perfil1{
+  max-width: 30%;
 }

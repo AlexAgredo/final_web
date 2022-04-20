@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Amaranth&family=Redressed&family=Sansita&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: rgb(255, 253, 244);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  position: relative;
+z-index: -3;
+}
+/*HEADER*/
+#header{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+height:200px;
+background-image: url(https://www.swantix.com/wp-content/uploads/2016/11/gdn.jpg);
+background-size: cover;
+background-position: center;
+position: relative;
+z-index: -1;
+}
+#header h1{
+  color: #fff;
+}
+.btnBack{
+  width: 120px;
+  height: 20px;
+  padding: 10px;
+  margin:5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s;
+  border: 2px solid #ca6b6b;
+  background: #ca6b6b;
+  color:#fff;
+  border-radius: 12px;
+  font-weight: bolder;
+}
+.btnShowAdd{
+  width: 120px;
+  height: 20px;
+  padding: 10px;
+  margin:5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s;
+  border: 2px solid #6eca6b;
+  background: #6eca6b;
+  color:#fff;
+  border-radius: 12px;
+  font-weight: bolder;
+}
+#botonesAdmin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  right: 100px;
+  left: auto;
+}
+/*TABLA ARTISTAS*/
+#containerArt{
+  width: 100%;
+min-height: 100vh;
+background: #fff;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+padding: 23px 20px;
+position: relative;
+z-index: -2;
+}
+
+#artData {
+  width: 1170px;
+  position: relative;
+  padding-top: 60px;
+  background-color: #fff;
+  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 40px 0px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 110px;
+}
+/*Tabla Artistas Head */
+#divHeadArt {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#divHeadArt table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.4;
+  
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+th,tr,td {
+  padding-right: 10px;
+}
+.headArtFila{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: rgb(42, 50, 61);
+}
+.headArtcolumn1 {
+  padding-left: 40px;
+}
+/* .headArtcolumn2 {
+  width: 20%;
+}
+.headArtcolumn3 {
+  width: 23%;
+}
+.headArtcolumn4 {
+  width: 20%;
+} */
+.headArtcolumn5 {
+  padding-right: 40px;
+}
+
+/*Tabla Artistas Body */
+#divBodyArt table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#tablaArt tr{
+   display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;
+}
+#tablaArt tr:nth-child(2n){ /*Para que se vea la fila par mas oscura */
+  background-color: #f8f6ff;
+}
+#tablaArt td {
+  font-size: 15px;
+  color: #808080;
+  line-height: 1.4;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.divNombre {
+  width: 150px;
+  padding-left: 40px;
+}
+.divImgArt {
+  /* width: 100%; */
+  width: 150px;
+  height: 70px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.divPerfil {
+  width: 200px;
+  text-align: center;
+}
+.divPlaylist {
+  width: 200px;
+  text-align: center;
+}
+.divEdicion {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+} 
+.btnDelete{
+  width: 50px;
+  height: 20px;
+  padding: 4px;
+  margin:5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.4s;
+  border: 2px solid #ca6b6b;
+  background: 0;
+  color:#ca6b6b;
+  border-radius: 12px;
+  font-weight: bolder;
+}
+.btnDelete:hover{
+  color: #fff;
+  background: #ca6b6b;
+  border: 2px solid #ca6b6b;
+}
+.btnEdit{
+  width: 50px;
+  height: 20px;
+  padding: 4px;
+  margin:5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.4s;
+  border: 2px solid #77b0be;
+  background: 0;
+  color:#77b0be;
+  border-radius: 12px;
+  font-weight: bolder;
+}
+.btnEdit:hover{
+  color: #fff;
+  background: #77b0be;
+  border: 2px solid #77b0be;
+}
+
+/* VENTANA EDIT */
+.editWindow{
+  margin: 0 auto;
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom:0;
+  width: 800px;
+  /* min-height: 50vh;  */
+  /* background: #fff; */
+  /* background: #808080; */
+  padding: 23px 20px;
+}
+.lightbox{
+  margin: 0 auto;
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.8);
+}
+.containerEdit{
+  display: none;
+  position: fixed;
+  background: #fff;
+  padding: 2%; /*antes estaba en 4*/
+  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 40px 0px;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 999;
+}
+.subtitle{
+  padding-bottom: 10px;
+  font-size: 16px;
+  color: #808080;
+}
+.titleEdit{
+padding: 10px;
+font-size: 14px;
+color: #6e6e6e;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 0.7px;
+}
+.newIptNombre {
+  display: none;
+  margin-left: 10px;
+  width: 90%;
+  padding: 13px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.4s;
+  border: 1px solid #d8d5ff;
+  border-radius: 6px;
+}
+.newIptNombre:focus {
+  border: 1px solid #e682cd;
+}
+.newIptPerfil {
+  display: none;
+  margin-left: 10px;
+  width: 90%;
+  padding: 13px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.4s;
+  border: 1px solid #d8d5ff;
+  border-radius: 6px;
+}
+.newIptPerfil:focus {
+  border: 1px solid #e682cd;
+}
+.newIptPlaylist {
+  display: none;
+  margin-left: 10px;
+  width: 90%;
+  padding: 13px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.4s;
+  border: 1px solid #d8d5ff;
+  border-radius: 6px;
+}
+.newIptPlaylist:focus {
+  border: 1px solid #e682cd;
+}
+::placeholder{
+  color: #a7a5be;
+  opacity: 0.8;
+}
+.containerAddImg{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
+label{
+  text-align: center;
+}
+.customFileBtn{
+  display: none;
+  width: 150px;
+  height: 20px;
+  margin-left: 10px;
+  padding: 13px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.4s;
+  border: 2px solid #77b0be;
+  background: 0;
+  color:#77b0be;
+  border-radius: 12px;
+  font-weight: bolder;
+}
+.customFileBtn:hover{
+  color: #fff;
+  background: #d19cc4;
+  border: 2px solid #d19cc4;
+}
+.divPreview {
+  width: 150px;
+  height: 80px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  background-image: url("../src/icons/uploadImg.png");
+}
+.btnImg{
+  display: none;
+  padding: 13px;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+  transition: all 0.4s;
+  border: 1px solid #d8d5ff;
+  border-radius: 6px;
+}
+.btnSave{
+  display: none;
+  margin-left: auto;
+  margin-right: 65px;
+  width: 100px;
+  height: 20px;
+  padding: 13px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.4s;
+  color: #fff;
+  background: #77b0be;
+  border: 2px solid #77b0be;
+  border-radius: 12px;
+  font-weight: bolder;
+}
+.btnSave:hover{
+  color: #fff;
+  background: #d19cc4;
+  border: 2px solid #d19cc4;
+  /* border: 2px solid #5594a1;
+  background: 0;
+  color:#90d6e8; */
+}
+.closeEdit{
+  display: block;
+  width: 20px;
+  fill:#77b0be;
+  margin-left: auto;
+  margin-right: 0px;
+  cursor: pointer;
+}
+.closeEdit:hover{
+fill: #d19cc4;
+}

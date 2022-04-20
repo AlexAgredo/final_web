@@ -1,102 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GALERÍA</title>
     <link rel="stylesheet" href="../styles/gallery.css" />
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <div class="divHeader">
-          <img src="../src/imgs/logoCaf.svg"  alt="logo festival" />
-          <ul>
-            <li><a href="../index.html">Inicio<span></span><span></span><span></span><span></span></a></li>
-            <li><a href="./artist.html">Artistas</a></li>
-            <li><a href="./gallery.html">Galería</a></li>
-          </ul>
+      <div class="divHeader">
+        <img src="../src/imgs/logoCaf.svg" alt="logo festival" />
+        <ul>
+          <li>
+            <a href="../index.html"
+              >Inicio<span></span><span></span><span></span><span></span
+            ></a>
+          </li>
+          <li><a href="./artist.html">Artistas</a></li>
+          <li><a href="./gallery.html">Galería</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="imgPrinc">
+          <img src="../src/imgs/9001-artwork.jpg" alt="" />
         </div>
-      </header>
-      <main>
-          <section>
-            <div class="imgPrinc">
-                <img src="../src/imgs/9001-artwork.jpg" alt="">
-            </div>
-        </section>
-        <section>
+      </section>
+      <section>
         <div class="barra">
-            <div class="one">
-                <h2>Edición del festival: <br> 23
-                </h2>
-            </div>
-            <div class="two">
-                <h2>Numero de asistentes '21: <br> 3000
-                </h2>
-            </div>
-            <div class="three">
-                <h2>Boletos vendidos '22: <br> 2800
-                </h2>
-            </div>
+          <div class="one">
+            <h2>
+              Edición del festival: <br />
+              3
+            </h2>
+          </div>
+          <div class="two">
+            <h2>
+              Numero de asistentes 2021: <br />
+              2000
+            </h2>
+          </div>
+          <div class="three">
+            <h2>
+              Boletos vendidos hasta ahora: <br />
+              834
+            </h2>
+          </div>
         </div>
-        </section>
+      </section>
 
-        <section>
-            <div class="container" id="ImgG">
-                <div class="imagen">
-                    <img src="../src/imgs/pexels-pixabay-433452.jpg" alt="">
-                    <h2>Título</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolorem mollitia ipsam, et molestiae possimus in illo nihil. Quo aspernatur officiis repellendus, odit non aliquid explicabo obcaecati ipsa impedit assumenda.</p>
-                </div>
-                <div class="imagen">
-                    <img src="../src/imgs/pexels-pixabay-513044.jpg" alt="">
-                    <h2>Título</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolorem mollitia ipsam, et molestiae possimus in illo nihil. Quo aspernatur officiis repellendus, odit non aliquid explicabo obcaecati ipsa impedit assumenda.</p>
-                </div>
-                <div class="imagen">
-                    <img src="../src/imgs/pexels-sergio-souza-1782146.jpg" alt="">
-                    <h2>Título</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolorem mollitia ipsam, et molestiae possimus in illo nihil. Quo aspernatur officiis repellendus, odit non aliquid explicabo obcaecati ipsa impedit assumenda.</p>
-                </div>
-                <div class="imagen">
-                    <img src="../src/imgs/pexels-tom-fisk-1692695.jpg" alt="">
-                    <h2>Título</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolorem mollitia ipsam, et molestiae possimus in illo nihil. Quo aspernatur officiis repellendus, odit non aliquid explicabo obcaecati ipsa impedit assumenda.</p>
-                </div>
-                <div class="imagen">
-                    <img src="../src/imgs/pexels-wendy-wei-1537636.jpg" alt="">
-                    <h2>Título</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolorem mollitia ipsam, et molestiae possimus in illo nihil. Quo aspernatur officiis repellendus, odit non aliquid explicabo obcaecati ipsa impedit assumenda.</p>
-                </div>
-                <div class="imagen">
-                    <img src="../src/imgs/pexels-wendy-wei-1537638.jpg" alt="">
-                    <h2>Título</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolorem mollitia ipsam, et molestiae possimus in illo nihil. Quo aspernatur officiis repellendus, odit non aliquid explicabo obcaecati ipsa impedit assumenda.</p>
-                </div>
-                <!-- <div class="imagen">
+      <section>
+        <div class="container" id="ImgG">
+          <div id="imgGal" class="imagen">
+            <img id="imgBorrar" src="../src/imgs/pexels-pixabay-433452.jpg" alt="" />
+            <h2 id="tituloGal"></h2>
+            <p id="altGal">
+              
+            </p>
+          </div>
+          <div class="imagen">
+            <img src="../src/imgs/pexels-pixabay-513044.jpg" alt="" />
+            <h2>Título</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              dolorem mollitia ipsam, et molestiae possimus in illo nihil. Quo
+              aspernatur officiis repellendus, odit non aliquid explicabo
+              obcaecati ipsa impedit assumenda.
+            </p>
+          </div>
+          <div class="imagen">
+            <img src="../src/imgs/pexels-sergio-souza-1782146.jpg" alt="" />
+            <h2>Título</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              dolorem mollitia ipsam, et molestiae possimus in illo nihil. Quo
+              aspernatur officiis repellendus, odit non aliquid explicabo
+              obcaecati ipsa impedit assumenda.
+            </p>
+          </div>
+          <div class="imagen">
+            <img src="../src/imgs/pexels-tom-fisk-1692695.jpg" alt="" />
+            <h2>Título</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              dolorem mollitia ipsam, et molestiae possimus in illo nihil. Quo
+              aspernatur officiis repellendus, odit non aliquid explicabo
+              obcaecati ipsa impedit assumenda.
+            </p>
+          </div>
+          <div class="imagen">
+            <img src="../src/imgs/pexels-wendy-wei-1537636.jpg" alt="" />
+            <h2>Título</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              dolorem mollitia ipsam, et molestiae possimus in illo nihil. Quo
+              aspernatur officiis repellendus, odit non aliquid explicabo
+              obcaecati ipsa impedit assumenda.
+            </p>
+          </div>
+          <div class="imagen">
+            <img src="../src/imgs/pexels-wendy-wei-1537638.jpg" alt="" />
+            <h2>Título</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              dolorem mollitia ipsam, et molestiae possimus in illo nihil. Quo
+              aspernatur officiis repellendus, odit non aliquid explicabo
+              obcaecati ipsa impedit assumenda.
+            </p>
+          </div>
+          <!-- <div class="imagen">
                     <img src="../src/imgs/pexels-wendy-wei-2513605.jpg" alt="">
                 </div> -->
-            </div>
-            <!-- <div class="Transp">
+        </div>
+        <!-- <div class="Transp">
                 <div class="Ver">
                     <img class="Imgaver" src="../src/imgs/pexels-pixabay-433452.jpg" alt="">
                 </div>
                 <button id="cierra" type="button">x</button>
             </div> -->
-        </section>
+      </section>
 
-        <!-- <script src="../js/gallery.js"></script> -->
-      </main>
-      <footer>
-        <img src="../src/imgs/redes.png" alt="">
-        <p>© RASEC S.A.S</p>
-        <br>
-        <p>Términos y Condiciones</p>
-        <img src="../src/imgs/logoCaf.png" alt="logo festival" id="logoFest" />
-      </footer>
-</body>
+      <script src="../js/gallery.js"></script>
+    </main>
+    <footer>
+      <img src="../src/imgs/redes.png" alt="" />
+      <p>© RASEC S.A.S</p>
+      <br />
+      <p>Términos y Condiciones</p>
+      <img src="../src/imgs/logoCaf.png" alt="logo festival" id="logoFest" />
+    </footer>
+  </body>
 </html>

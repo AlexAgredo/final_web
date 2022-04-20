@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+    <link rel="stylesheet" href="../styles/tables.css" />
+    <script src="https://kit.fontawesome.com/420f89d899.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="textHeader"><h1>Panel de artistas</h1></div>
+      <div id="botonesAdmin">
+        <input type="button" class="btnBack" value = "Volver" onClick="Javacsript:goBack(this)">
+        <input type="button" class="btnShowAdd" value = "Añadir Artista" onClick="Javacsript:showAdd(this)">
+      </div>
+      <div id="containerAñadir">
+        <div class="editWindow">
+          <div class="lightbox">.</div>
+          <div class="containerEdit">
+            <svg class="closeEdit" onclick="Javascript:closeAdd()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+            <h2 class="title">Añadir un artista</h2>
+            <p class="subtitle">
+              Añade un artista, puedes dejar en blanco los
+              parámetros que no quieras añadir.
+            </p>
+            <p class="titleAdd"></p>
+            <input type="text" id="iptNombre" placeholder="Añade el nombre del artista" class="newIptNombre">
+            <p class="titleAdd"></p>
+            <input type="text" id="iptPerfil" placeholder="Breve descripción del artista" class="newIptPerfil">
+            <p class="titleAdd"></p>
+            <input type="text" id="iptPlaylist" placeholder="Link de la playlist de Spotify" class="newIptPlaylist">
+            <p class="titleAdd"></p> 
+            <div class="containerAddImg">
+            <div class="divPreview"></div>
+            <label class="customFileBtn"><input type="file" id="iptImg" class="btnImg" onClick="Javacsript:loadImg(this)" accept="image/png, image/jpg"/>Agregar nueva foto</label>
+          </div>
+            <input type="button" class="add btnSave" value = "Añadir" onClick="Javacsript:addRow(this)">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- <b>Current data in the system ...</b> -->
+    <div id="containerArt">
+      <div id="artData">
+        <div id="divHeadArt">
+          <table>
+            <thead>
+              <tr class="headArtFila">
+                <th class="headArtcolumn1">Nombre</th>
+                <th class="headArtcolumn2">Imagen</th>
+                <th class="headArtcolumn3">Perfil</th>
+                <th class="headArtcolumn4">Playlist</th>
+                <th class="headArtcolumn5">Edición</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+
+        <div id="divBodyArt">
+          <table id="tablaArt">
+            <tbody>
+              <!-- aca es donde ira lo que el usuario agregue -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <div class="editWindow">
+        <div class="lightbox">.</div>
+        <div class="containerEdit">
+          <svg class="closeEdit" onclick="Javascript:closeEdit()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+          <h2 class="title">Edita un artista</h2>
+          <p class="subtitle">
+            Edita al artista que seleccionaste, puedes dejar en blanco los
+            parámetros que no quieras editar.
+          </p>
+          <p class="titleEdit"></p>
+          <input type="text" placeholder="Añade el nombre del artista" class="newIptNombre">
+          <p class="titleEdit"></p>
+          <input type="text" placeholder="Breve descripción del artista" class="newIptPerfil">
+          <p class="titleEdit"></p>
+          <input type="text" placeholder="Link de la playlist de Spotify" class="newIptPlaylist">
+          <p class="titleEdit"></p> 
+          <div class="containerAddImg"></div>
+          <div class="divPreview"></div>
+          <label class="customFileBtn"><input type="file" class="btnImg" accept="image/png, image/jpg" onClick="Javacsript:editImg(this)"/>Agregar nueva foto</label>
+          <input type="button" class="btnSave" value = "Guardar" onClick="Javacsript:saveRow(this)">
+        </div>
+      </div>
+      
+    </div>
+    <script src="../js/tables.js"></script>
+  </body>
+</html>
