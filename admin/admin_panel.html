@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ADMIN</title>
+  <title>PANEL DE ADMIN</title>
+  <link rel="stylesheet" href="../styles/admin_panel.css">
   <link rel="stylesheet" href="../styles/admin.css">
   <link rel="stylesheet" href="../styles/global.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,16 +27,11 @@
   </header>
   <main>
     <div class="half-circle"></div>
-    <form action="" class="Hero__form" name="contact-form" method="post" action="" id="box-form">
-      <label for="">Usuario</label>
-      <input placeholder="Ingresa Nombre de Usuario" type="text" name="usuario" required="" id="username">
-      <label for="">Contraseña</label>
-      <input placeholder="Ingresa Contraseña" type="password" name="password" required="" id="password">
-      <input id="boton" type="submit" value="Enviar" class="Button">
-      <span id="error">Error de credenciales</span>
-    </form>
+    <div class="botones">
+        <a href=""><button class="btn fourth">Editar Artistas</button></a>
+        <a href=""><button class="btn fourth">Editar Galería</button></a>
+    </div>
   </main>
-  <script src="../js/admin.js"></script>
 </body>
 
 </html>

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boletas</title>
+    <title>ENTRADAS</title>
     <link rel="stylesheet" href="../styles/boletas.css">
-    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/global.css">
 </head>
 <body>
     <header>
@@ -14,8 +14,8 @@
           <img src="../src/imgs/logoCaf.svg"  alt="logo festival" />
           <ul>
             <li><a href="../index.html">Inicio<span></span><span></span><span></span><span></span></a></li>
-            <li><a href="">Artistas</a></li>
-            <li><a href="">Galería</a></li>
+            <li><a href="./artist.html">Artistas</a></li>
+            <li><a href="./gallery.html">Galería</a></li>
           </ul>
         </div>
     </header>
@@ -30,15 +30,15 @@
                 <p type="CVC:"><input type="password" placeholder="" required class="placeholder"></input></p>
                 <p type="Cantidad a comprar:">
                   <select name="boletas" id="boletas" required>
-                      <option value="1">1 - $ 549.900</option>
-                      <option value="2">2 - $ 1.099.800</option>
-                      <option value="3">3 - $ 1.649.700</option>
-                      <option value="4">4 - $ 2.199.600</option>
+                      <option id="1" value="549900">1 - $ 549.900</option>
+                      <option id="2" value="1099800">2 - $ 1.099.800</option>
+                      <option id="3" value="1649700">3 - $ 1.649.700</option>
+                      <option id="4" value="2199600">4 - $ 2.199.600</option>
                   </select>
               </p>
               <div class="descuento">
                 <p type="Código de descuento:"><input placeholder="Recibe tú código completando la trivia" class="placeholder" id="descuento"></input></p>
-                <button style="cursor: pointer;" id="boton1">Verificar</button>
+                <button style="cursor: pointer;" id="boton2">Verificar</button>
                 <!-- <button id="boton1">Verificar</button> -->
                 <p id="si" style="display: none; color: green;">Código Válido</p>
                 <p id="no" style="display: none; color: red;">Código Inválido</p>

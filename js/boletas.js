@@ -26,14 +26,12 @@
     return false;
 } */
 
-let boton1 = document.getElementById("boton1");
-
-boton1.addEventListener("submit", function(event){
-    event.preventDefault;
-})
-
+let boton2 = document.getElementById("boton2");
+let boton = document.getElementById("boton");
 let descuento = document.getElementById("descuento");
-boton1.addEventListener("click", comprobarDescuento);
+
+boton2.addEventListener("click", comprobarDescuento);
+boton.addEventListener("click", comprarBoletas);
 
 function comprobarDescuento() {
 
@@ -48,32 +46,65 @@ function comprobarDescuento() {
     }
 }
 
+let e1 = document.getElementById("1").value;
+let e2 = document.getElementById("2").value;
+let e3 = document.getElementById("3").value;
+let e4 = document.getElementById("4").value;
+
 function comprarBoletas() {
+    if (descuento.value === "CAF50"){
+        alert("Se ha enviado tus entradas con el 50% de descuento a tú correo electrónico " + e1 / 2)
+
+    }else {
+        alert("Se ha enviado tus entradas a tú correo electrónico")
+    }
     
 }
 
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
+
 // Create a function that will generate new question objects
 function newQuestion(params) {
+    
     var temp = {
         question:  params[0],
         choices: params[1],
         correctAnswer: params[2]
-    };
+    };console.log(temp);
     return temp;
+    
 }
 // Create the array allQuestions and generate all of the new questions
-var allQuestions = [
-    ["<p><b>Pregunta 1:</b><br/> How much is 1 + 1?<p/>", ["1", "2", "3", "4"], 1],
-    ["<p><b>Pregunta 2:</b><br/>How much is 2 + 2?<p/>", ["2", "6", "3", "4"], 3],
-    ["<p><b>Pregunta 3:</b><br/>How much is 3 + 3?<p/>", ["6", "9", "3", "12"], 0],
-    ["<p><b>Pregunta 4:</b><br/>How much is 4 + 4?<p/>", ["10", "12", "8", "4"], 2],
-    ["<p><b>Pregunta 5:</b><br/>How much is 5 + 5?<p/>", ["10", "15", "14", "11"], 0],
-    ["<p><b>Pregunta 6:</b><br/>How much is 6 + 6?<p/>", ["11", "12", "13", "14"], 1],
-    ["<p><b>Pregunta 7:</b><br/>How much is 7 + 7?<p/>", ["49", "21", "15", "14"], 3],
-    ["<p><b>Pregunta 8:</b><br/>How much is 8 + 8?<p/>", ["0", "16", "64", "24"], 1],
-    ["<p><b>Pregunta 9:</b><br/>How much is 9 + 9?<p/>", ["81", "18", "15", "24"], 1],
-    ["<p><b>Pregunta 10:</b><br/>How much is 10 + 10?<p/>", ["10", "20", "30", "40"], 1]
-   ].map(newQuestion);
+var /* all */Questions = [
+    ["<p><b>Pregunta 1:</b><br/>¿Cuáles fueron los primeros singles de Boris Brejcha?<p/>", ["White snake y Fireworker remixes", "Purple noise y Monster in the box", "Violet y Monster", "4"], 1],
+    ["<p><b>Pregunta 2:</b><br/>¿En qué año Jackson Wang estrenó su álbum Mirrors?<p/>", ["2018", "2019", "2017", "2022"], 1],
+    ["<p><b>Pregunta 3:</b><br/>¿Cómo se llama la canción más escuchada de los Backstreet boy?<p/>", ["Everybody", "As long as you love me", "I want it that way", "12"], 2],
+    ["<p><b>Pregunta 4:</b><br/>¿Cuántos ex miembros ha tenido The Killers?<p/>", ["3", "2", "1", "4"], 0],
+    ["<p><b>Pregunta 5:</b><br/>¿Con qué canción se considera que Bad Bunny alcanzó el estrellato?<p/>", ["Soy peor", "I like it", "Dákiti", "La Santa"], 1],
+    ["<p><b>Pregunta 6:</b><br/>¿Cual es la nacionalidad de Boris Brejcha?<p/>", ["Noruega", "Americana", "Alemana", "Colombiana"], 2],
+    ["<p><b>Pregunta 7:</b><br/>¿En qué año se presentó Jackson Wang en el Coachella?<p/>", ["2022", "2021", "2019", "2021"], 0],
+    ["<p><b>Pregunta 8:</b><br/>¿En qué año se separaron y volvieron los Backstreet boy, respectivamente?<p/>", ["2006 - 2012", "1999 - 2004", "2003 - 2009", "2002 - 2005"], 3],
+    ["<p><b>Pregunta 9:</b><br/>¿Cuál es el nombre del festival donde se presentaron The Killers después de su receso?<p/>", ["Hard Rock Calling", "Top of the mountain", "Lollapalooza", "24"], 2],
+    ["<p><b>Pregunta 10:</b><br/>¿Cual es el verdadero nombre de Bad Bunny?<p/>", ["Benito Tocamela", "Benito Benítez", "Barnie Benítez", "Benito Martínez"], 3]
+   ] 
+   let allQuestions = shuffle(Questions).map(newQuestion);
+
 // Create and initialize the total (to 0), number (to 0), and totalQuestions (to the length of allQuestions) variables
 var total = 0, number = 0, totalQuestions = allQuestions.length, answers = [];
 
@@ -93,6 +124,7 @@ $(document).ready(function() {
             // http://stackoverflow.com/questions/5795499/changing-text-of-radio-button
             // Where it was explained that the text of the radio button was now explicitly associated with the
             // use of <label>
+            console.log(query);
             for(var i = 0; i < query.choices.length; i++)
                 $("#answers").append("<input type='radio' name='answers' id='radio" + i + "' value='answer" + i
                     + "'><label for='test" + i + "'>" + query.choices[i] + "</label><br>");
@@ -137,9 +169,6 @@ $(document).ready(function() {
         if (total <= 90)
          $("#resultbad").show(1000);
          
-        
-         
-        
     }
 
     function updateScore(change) {
@@ -168,9 +197,7 @@ $(document).ready(function() {
       $("#startagain").on('click', function() {
         
        location.reload();
-     
-    
-         
+        
     });
     
     $("#next").on('click', function() {
@@ -181,7 +208,6 @@ $(document).ready(function() {
                 newQuestionAnswers();
             else
                 finalScore();
-            
             
         }
 
@@ -208,9 +234,7 @@ $(document).ready(function() {
         $("#bar").width('90%');
         if (number > 9)
         $("#bar").width('100%');
-        
-        
-   
+
     });
         
 
@@ -247,6 +271,5 @@ $(document).ready(function() {
             updateScore(-10);
         newQuestionAnswers();
         
-          
     });
 });

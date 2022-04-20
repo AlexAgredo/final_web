@@ -1,13 +1,3 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html{
-  font-size: 62.5%;
-  background-color: rgb(255, 255, 255);
-}
 .divform{
     padding: 2%;
     margin: 0 auto;

@@ -1,13 +1,3 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html{
-    font-family: 'Josefin Sans', sans-serif;
-}
-
 .half-circle{
     float: left;
     shape-outside: circle(50% at 0 50%);

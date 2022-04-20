@@ -2,12 +2,16 @@ let input = document.getElementById("username");
 let input2 = document.getElementById("password");
 
 document.getElementById("boton").addEventListener("click", ADMIN);
-document.getElementById("boton").addEventListener("click", encriptar);
+/* document.getElementById("boton").addEventListener("click", encriptar); */
 
 function ADMIN() {
 
     if(input.value === "javi23" && input2.value === "12345") {
-        console.log("entró");
+        let password = document.getElementById("password").value;
+        let crypto = btoa(password);
+        alert("Contraseña encriptada = " + crypto);
+        window.open("../admin/admin_panel.html");
+        /* console.log("entró"); */
     } else {
         document.getElementById("error").style.opacity="1";
         input.value = "";
@@ -15,9 +19,8 @@ function ADMIN() {
     }
 }
 
-function encriptar() {
+/* function encriptar() {
     let password = document.getElementById("password").value;
     let crypto = btoa(password);
     alert("Contraseña encriptada = " + crypto);
-
-}
+} */
