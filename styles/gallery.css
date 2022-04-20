@@ -54,7 +54,7 @@ h2 {
 }
 
 .imagen:hover{
-  transform: scale(140%);
+  transform: scale(105%);
   position: relative;
   z-index: 1;
 }
