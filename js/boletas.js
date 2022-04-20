@@ -60,7 +60,7 @@ function comprarBoletas() {
         alert("Se ha enviado tus entradas con el 50% de descuento a tú correo electrónico. TOTAL = $ " + boletaSelec / 2)
 
     }else {
-        alert("Se ha enviado tus entradas a tú correo electrónico")
+        alert("Se ha enviado tus entradas a tú correo electrónico. TOTAL = $ " + boletaSelec)
     }
     
 }
