@@ -46,14 +46,18 @@ function comprobarDescuento() {
     }
 }
 
-let e1 = document.getElementById("1").value;
+/* let e1 = document.getElementById("1").value;
 let e2 = document.getElementById("2").value;
 let e3 = document.getElementById("3").value;
-let e4 = document.getElementById("4").value;
+let e4 = document.getElementById("4").value; */
+
 
 function comprarBoletas() {
+    let boletas = document.getElementById("boletas");
+    let boletaSelec = boletas.options[boletas.selectedIndex].value;
+    console.log(boletaSelec);
     if (descuento.value === "CAF50"){
-        alert("Se ha enviado tus entradas con el 50% de descuento a tú correo electrónico " + e1 / 2)
+        alert("Se ha enviado tus entradas con el 50% de descuento a tú correo electrónico. TOTAL = $ " + boletaSelec / 2)
 
     }else {
         alert("Se ha enviado tus entradas a tú correo electrónico")
@@ -92,16 +96,16 @@ function newQuestion(params) {
 }
 // Create the array allQuestions and generate all of the new questions
 var /* all */Questions = [
-    ["<p><b>Pregunta 1:</b><br/>¿Cuáles fueron los primeros singles de Boris Brejcha?<p/>", ["White snake y Fireworker remixes", "Purple noise y Monster in the box", "Violet y Monster", "4"], 1],
-    ["<p><b>Pregunta 2:</b><br/>¿En qué año Jackson Wang estrenó su álbum Mirrors?<p/>", ["2018", "2019", "2017", "2022"], 1],
-    ["<p><b>Pregunta 3:</b><br/>¿Cómo se llama la canción más escuchada de los Backstreet boy?<p/>", ["Everybody", "As long as you love me", "I want it that way", "12"], 2],
-    ["<p><b>Pregunta 4:</b><br/>¿Cuántos ex miembros ha tenido The Killers?<p/>", ["3", "2", "1", "4"], 0],
-    ["<p><b>Pregunta 5:</b><br/>¿Con qué canción se considera que Bad Bunny alcanzó el estrellato?<p/>", ["Soy peor", "I like it", "Dákiti", "La Santa"], 1],
-    ["<p><b>Pregunta 6:</b><br/>¿Cual es la nacionalidad de Boris Brejcha?<p/>", ["Noruega", "Americana", "Alemana", "Colombiana"], 2],
-    ["<p><b>Pregunta 7:</b><br/>¿En qué año se presentó Jackson Wang en el Coachella?<p/>", ["2022", "2021", "2019", "2021"], 0],
-    ["<p><b>Pregunta 8:</b><br/>¿En qué año se separaron y volvieron los Backstreet boy, respectivamente?<p/>", ["2006 - 2012", "1999 - 2004", "2003 - 2009", "2002 - 2005"], 3],
-    ["<p><b>Pregunta 9:</b><br/>¿Cuál es el nombre del festival donde se presentaron The Killers después de su receso?<p/>", ["Hard Rock Calling", "Top of the mountain", "Lollapalooza", "24"], 2],
-    ["<p><b>Pregunta 10:</b><br/>¿Cual es el verdadero nombre de Bad Bunny?<p/>", ["Benito Tocamela", "Benito Benítez", "Barnie Benítez", "Benito Martínez"], 3]
+    ["<p><b>Pregunta:</b><br/>¿Cuáles fueron los primeros singles de Boris Brejcha?<p/>", ["White snake y Fireworker remixes", "Purple noise y Monster in the box", "Violet y Monster", "Monster y Ourter Space"], 1],
+    ["<p><b>Pregunta:</b><br/>¿En qué año Jackson Wang estrenó su álbum Mirrors?<p/>", ["2018", "2019", "2017", "2022"], 1],
+    ["<p><b>Pregunta:</b><br/>¿Cómo se llama la canción más escuchada de los Backstreet boy?<p/>", ["Everybody", "As long as you love me", "I want it that way", "Larger Than Life"], 2],
+    ["<p><b>Pregunta:</b><br/>¿Cuántos ex miembros ha tenido The Killers?<p/>", ["3", "2", "1", "4"], 0],
+    ["<p><b>Pregunta:</b><br/>¿Con qué canción se considera que Bad Bunny alcanzó el estrellato?<p/>", ["Soy peor", "I like it", "Dákiti", "La Santa"], 1],
+    ["<p><b>Pregunta:</b><br/>¿Cual es la nacionalidad de Boris Brejcha?<p/>", ["Noruega", "Americana", "Alemana", "Colombiana"], 2],
+    ["<p><b>Pregunta:</b><br/>¿En qué año se presentó Jackson Wang en el Coachella?<p/>", ["2022", "2021", "2019", "2021"], 0],
+    ["<p><b>Pregunta:</b><br/>¿En qué año se separaron y volvieron los Backstreet boy, respectivamente?<p/>", ["2006 - 2012", "1999 - 2004", "2003 - 2009", "2002 - 2005"], 3],
+    ["<p><b>Pregunta:</b><br/>¿Cuál es el nombre del festival donde se presentaron The Killers después de su receso?<p/>", ["Hard Rock Calling", "Top of the mountain", "Lollapalooza", "Stereo Picnic"], 2],
+    ["<p><b>Pregunta:</b><br/>¿Cual es el verdadero nombre de Bad Bunny?<p/>", ["Benito Camela", "Benito Benítez", "Barnie Benítez", "Benito Martínez"], 3]
    ] 
    let allQuestions = shuffle(Questions).map(newQuestion);
 
